@@ -17,5 +17,8 @@ https://www.w3schools.com/html/html_intro.asp
 `(backtick) : 소스코드 표시를 위한 박스표시를 다음과 같이 생성 가능
 
 ```
+An HTML element is defined by a start tag, some content, and an end tag:
 <tagname>CONTENTS</tagname>
+
+** Empty element : start tag만으로 구성된 
 ```
