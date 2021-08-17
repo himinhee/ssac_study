@@ -14,3 +14,8 @@ https://www.w3schools.com/html/html_intro.asp
 > - 텍스트 컨텐츠
 > - 멀티미디어 컨텐츠 : 이미지, 비디오, 오디오
 
+`(backtick) : 소스코드 표시를 위한 박스표시를 다음과 같이 생성 가능
+
+```
+<tagname>CONTENTS</tagname>
+```
