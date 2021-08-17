@@ -1,9 +1,16 @@
 # SSAC Front-end study
 
+## md 파일(Markdown) 문법
+- '#' 갯수는 많을수록 작은 글씨 & 소제목
+
 ## HTML
 
 ### HTML Introduction
 https://www.w3schools.com/html/html_intro.asp
 
-### md 파일(Markdown) 문법
-- '#' 갯수는 많을수록 작은 글씨 & 소제목
+> 웹페이지 구조 표시
+> 
+> 웹페이지 컨텐츠 표시
+> - 텍스트 컨텐츠
+> - 멀티미디어 컨텐츠 : 이미지, 비디오, 오디오
+
