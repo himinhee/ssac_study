@@ -77,3 +77,6 @@ https://www.w3schools.com/html/html_paragraphs.asp
 https://www.w3schools.com/html/html_links.asp
 
 - Use 'a' tag : stems from anchor
+- 'href' attribute : hyperlink reference
+- 'target' attribute " target = "_blank" 새창에서 열기
+- 
