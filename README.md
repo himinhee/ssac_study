@@ -73,10 +73,41 @@ https://www.w3schools.com/html/html_attributes.asp
 ### HTML Paragraphs
 https://www.w3schools.com/html/html_paragraphs.asp
 
+
 ### HTML Hyperlinks
 https://www.w3schools.com/html/html_links.asp
 
 - Use 'a' tag : stems from anchor
 - 'href' attribute : hyperlink reference
 - 'target' attribute " target = "_blank" 새창에서 열기
-- 
+
+
+### HTML URL
+https://www.w3schools.com/html/html_urlencode.asp
+
+인터넷주소
+- IP(Internet Protocol) 주소 : 192.168.0.1 - 이게 원래 주소
+- 도메인(Domain name) 주소 : www.naver.com
+- DNS(Domain Name Server/System) : domain->ip 로 바꿔주는 기능
+
+URL(Uniform Resource Locators)
+- 자세한 주소 : 도메인주소 + 해당 페이지 폴더위치/파일위치
+- 인터넷 주소를 표현하는 가장 큰 범위
+- 프로토콜 : http, https, ftp, etc.
+
+
+### HTML File Path
+https://www.w3schools.com/html/html_filepaths.asp
+
+Absolute Path : the full URL to a file
+- 출발 지점에 상관없이 항상 같은 리소스를 찾을 수 있도록 표시하는 주소/경로
+- ex) https://www.w3schools.com/images/picture.jpg
+- 장점 : 항상 같은 자원의 위치로 찾아올 수 있음
+- 단점 : 주소 표시 길이가 길다
+
+Relative Path points to a file relative to the current page
+- 출발 지점을 기준으로 리소스 경로를 표시하는 주소/경로
+- Case 1 : images/picture.jpg - "images" folder located in the current folder
+- Case 2 : /images/picture.jpg - "images" folder located at the root of the current web
+- 장점 : 주소 표시 길이가 짧다
+- 단점 : 기준에 따라서 표시 방식이 매번 달라짐
