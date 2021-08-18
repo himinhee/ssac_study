@@ -44,3 +44,20 @@ An HTML element is defined by a start tag, some content, and an end tag:
 
 ** Empty element : start tag만으로 구성된 
 ```
+
+### HTML Elements
+https://www.w3schools.com/html/html_elements.asp
+
+> 포함관계
+> - 기준에 따라서 조상요소(ancestor), 부모요소(parent), 자식요소(child), 자손요소(decendant)
+
+```
+<html>
+  <body>
+    <h1>Web page</h1>
+  </body>
+</html>
+
+* html : body의 부모요소, h1의 조상요소
+* body : html이 자식요소, h1의 부모요소
+``` 
