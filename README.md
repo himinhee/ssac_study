@@ -61,3 +61,11 @@ https://www.w3schools.com/html/html_elements.asp
 * html : body의 부모요소, h1의 조상요소
 * body : html이 자식요소, h1의 부모요소
 ``` 
+
+### HTML Attributes
+https://www.w3schools.com/html/html_attributes.asp
+
+- HTML attributes provide additional information about HTML elements.
+- cf) HTML 속성은 attribute라고 불리나, CSS 속성은 property로 불림
+- Attributes usually come in name/value pairs like: name="value"
+- ex) <img src="img_girl.jpg" width="500" height="600">
