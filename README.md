@@ -134,4 +134,19 @@ The dl tag defines the description list, the dt tag defines the term (name), and
 ### HTML Media
 https://www.w3schools.com/html/html_media.asp
 
-......
+HTML Video : Video tag를 이용
+- 주요 attributes : controls, autoplay, muted, loop (자동 재생을 원하는 경우, 크롬정책때문에 autoplay와 함께 꼭 muted가 있어야 한다.)
+- 배경으로 비디오를 쓸 경우, 당연히 controls 생략
+
+HTML Images
+- alt : alternative for blind 
+
+HTML Youtube
+- Youtube에서 공유-퍼가기-iframe tag 내용 그대로 활용
+- ?autoplay=1&mute=1 을 주소에 추가
+
+
+### HTML Forms
+
+각종 입력을 받는 기능
+Javascript와 연동되어 있음
