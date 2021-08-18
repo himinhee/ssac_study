@@ -62,6 +62,10 @@ https://www.w3schools.com/html/html_elements.asp
 * body : html이 자식요소, h1의 부모요소
 ``` 
 
+### HTML Headings
+https://www.w3schools.com/html/html_headings.asp
+
+
 ### HTML Attributes
 https://www.w3schools.com/html/html_attributes.asp
 
@@ -113,3 +117,21 @@ Relative Path points to a file relative to the current page
 - 단점 : 기준에 따라서 표시 방식이 매번 달라짐
 
 
+### HTML Table
+https://www.w3schools.com/html/html_tables.asp
+
+HTML Table Generator
+https://www.tablesgenerator.com/html_tables
+
+
+### HTML Lists
+https://www.w3schools.com/html/html_lists.asp
+
+Description List 
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
+  
+
+### HTML Media
+https://www.w3schools.com/html/html_media.asp
+
+......
