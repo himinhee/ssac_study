@@ -107,7 +107,9 @@ Absolute Path : the full URL to a file
 
 Relative Path points to a file relative to the current page
 - 출발 지점을 기준으로 리소스 경로를 표시하는 주소/경로
-- Case 1 : images/picture.jpg - "images" folder located in the current folder
+- Case 1 : images/picture.jpg - "images" folder located in the current folder, or ../images/picture.jpg
 - Case 2 : /images/picture.jpg - "images" folder located at the root of the current web
 - 장점 : 주소 표시 길이가 짧다
 - 단점 : 기준에 따라서 표시 방식이 매번 달라짐
+
+
