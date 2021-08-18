@@ -128,8 +128,8 @@ https://www.tablesgenerator.com/html_tables
 https://www.w3schools.com/html/html_lists.asp
 
 Description List 
-The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
-  
+The dl tag defines the description list, the dt tag defines the term (name), and the dd tag describes each term:
+
 
 ### HTML Media
 https://www.w3schools.com/html/html_media.asp
