@@ -119,3 +119,11 @@ HTML Youtube
 ### HTML Forms
 각종 입력을 받는 기능
 Javascript와 연동되어 있음
+
+
+## CSS
+
+### Simple Selector 
+https://www.w3schools.com/css/css_selectors.asp
+
+표기 : id, class 모두 kebab case - kebab-case 즉 - 로 연결
