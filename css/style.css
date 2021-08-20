@@ -138,10 +138,6 @@ table {
 .header {
   height: 100px;
 }
-.section01 {
-  height: 315px;
-  background-color: #f6f6f6;
-}
 .gnb-list-item {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -154,11 +150,19 @@ table {
 .gnb-list-link:hover {
   color: #10c9c3;
 }
+.section01 {
+  height: 315px;
+  background-color: #f6f6f6;
+  padding-top: 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
 .section-heading {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 38px;
   color: #191919;
+  margin-bottom: 35px;
 }
 .paragraph {
   font-family: "NanumSquare", sans-serif;
@@ -178,4 +182,9 @@ table {
 .figure-video {
   width: 340px;
   height: 300px;
+}
+.footer {
+  height: 280px;
+  background-color: #141414;
+  color: white;
 }
