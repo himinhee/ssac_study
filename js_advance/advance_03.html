@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="list">
+      <li class="list-item">item1</li>
+      <li class="list-item">item2</li>
+      <li class="list-item">item3</li>
+    </ul>
+    <script>
+      //동적 생성
+      const listItem = document.createElement("li");
+      const listText = document.createTextNode("item4");
+      //상기 2개 element를 연결 - li는 parent, item4는 child
+      const listNode = listItem.appendChild(listText);
+    </script>
+  </body>
+</html>
