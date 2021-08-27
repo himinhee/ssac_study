@@ -163,6 +163,18 @@ table {
 .gnb-list-link:hover {
   color: #10c9c3;
 }
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  /* transparent: 배경을 투명색으로 설정 */
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+.hamburger-menu > img {
+  width: 30px;
+  height: 30px;
+}
 .section01 {
   height: 315px;
   background-color: #f6f6f6;
@@ -198,6 +210,9 @@ table {
 .more-link:hover {
   background: red;
   color: #fff;
+}
+.tab {
+  display: none;
 }
 .group {
   display: flex;
@@ -246,9 +261,19 @@ table {
 
 @media screen and (max-width: 900px) {
   .header {
-    height: auto;
-    flex-direction: column;
-    padding: 0 0 10px 0;
+    height: 50px;
+    /* flex-direction: column; 기존 메뉴 대신 버튼을 넣기 위해 기존 메뉴 주석 처리*/
+    /* 좌우 20px, 밑 10px */
+    padding: 0 20px 10px;
+    /* position을 abosolute로 하면 scrolling하면 같이 움직임. 메뉴 상단 고정을 위해서는 fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* position을 absolute or fixed로 설정 시 width는 child element에 의해서 결정 */
+    /* 그래서 다시 가로 길이를 100%로 맞추기 위해 width를 다시 100%로 설정해줌 */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
   }
   .logo {
     margin-top: 10px;
@@ -256,13 +281,34 @@ table {
     text-align: center;
   }
   .gnb {
-    margin-top: 10px;
+    margin-top: 0;
+    position: absolute;
+    top: 50px;
+    right: -200px;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 50px 30px 100px;
+    box-sizing: border-box;
+    /* display: none; */
+    transition: right 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+  }
+  .gnb.active {
+    /* display: block; */
+    opacity: 1;
+    right: 0;
   }
   .gnb-list {
     justify-content: center;
+    flex-direction: column;
   }
-  .gnb-list-item: first-child {
+  .hamburger-menu {
+    display: block;
+    margin-top: 6px;
+  }
+  .gnb-list-item {
     margin-left: 0;
+    margin-bottom: 70px;
   }
   .section-heading {
     font-size: 24px;
@@ -273,8 +319,27 @@ table {
   .paragraph br {
     display: none;
   }
+  .tab {
+    display: flex;
+    width: 340px;
+    margin: 30px auto;
+  }
+  .tab-item {
+    width: 33.3333%;
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .tab-item.active {
+    background-color: #17b7d4;
+    color: #ffffff;
+  }
   .group {
     flex-direction: column;
+    display: none;
+  }
+  .group.active {
+    display: flex;
   }
   .figure {
     margin: 0 auto;
