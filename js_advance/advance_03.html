@@ -7,9 +7,9 @@
     <title>Document</title>
   </head>
   <body>
-    <ul class="list">
+    <ul class="list" id="list">
       <li class="list-item">item1</li>
-      <li class="list-item">item2</li>
+      <li class="list-item" id="remove-item">item2</li>
       <li class="list-item">item3</li>
     </ul>
     <script>
@@ -18,6 +18,20 @@
       const listText = document.createTextNode("item4");
       //상기 2개 element를 연결 - li는 parent, item4는 child
       const listNode = listItem.appendChild(listText);
+
+      //추가
+      const listDom = document.querySelector(".list");
+      listDom.apendChild(listNode);
+
+      //삭제
+      const listParent = document.getElementByID("list");
+      const removeChild = document.getElementByID("remove-item");
+      listParent.removeChild(removeChild);
+
+      //변경
+      const changeNode = document.querySelectorAll(".listItem");
+      console.log(changeNode);
+      changeNode[1].innerHTML = "<span>text3</span>";
     </script>
   </body>
 </html>
