@@ -11,6 +11,46 @@
         height: 30px;
         line-height: 30px;
       }
+      .search-section {
+        widows: 500px;
+        margin-top: 50px;
+      }
+      .search-input {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .search-input:focus {
+        background-color: pink;
+      }
+      .search-result {
+        width: 100%;
+        border: 1px solid #dddddd;
+        box-sizing: border-box;
+        padding: 20px;
+        color: #aaaaaa;
+      }
+      .select {
+        height: 30px;
+        box-sizing: border-box;
+      }
+      .selet-result {
+        padding: 20px;
+        border: 1px solid #aaa;
+      }
+      .select-date {
+        height: 30px;
+        box-sizing: border-box;
+      }
+      .date-result {
+        height: 30px;
+        box-sizing: border-box;
+      }
+      .date-button {
+        height: 30px;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -21,7 +61,40 @@
       <input type="text" class="input result" />
       <button type="button" class="btn1">더하기</button>
     </div>
+
+    <div class="search-section">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="검색할 단어를 입력해주세요"
+      />
+      <div class="search-result"></div>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <select class="select">
+        <option>언어를 선택해주세요.</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="Javascript">Javascript</option>
+      </select>
+      <div class="select-result"></div>
+    </div>
+    <div style="margin-top: 50px;">
+      <select class="select-year select-date">
+        <option>연도를 선택해주세요.</option>
+      </select>
+      <select class="select-month select-date">
+        <option>월을 선택해주세요.</option>
+      </select>
+      <select class="select-day select-date">
+        <option>일를 선택해주세요.</option>
+      </select>
+      <button type="button" class="date-button">전송</button>
+      <div class="date-result"></div>
+    </div>
     <script>
+      // <!-- text input에 값 입력해서 사용하기 -->
       const input1 = document.querySelector(".input1");
       const input2 = document.querySelector(".input2");
       const result = document.querySelector(".result");
@@ -32,6 +105,80 @@
         let inputValue2 = Number(input2.value);
         let sum = inputValue1 + inputValue2;
         result.value = sum;
+      });
+
+      // input에 값이 입력될 때 바로 update 되도록 이벤트 구현
+      const searchInput = document.querySelector(".search-input");
+      const searchResult = document.querySelector(".search-result");
+
+      //event : addEventListner가 감지한 object
+      // HTML 요소에 커서가 이동하거나 선택되었을 떄 focus가 이동되었다라고 이야기 함.
+      // change 이벤트 : 내용 변화 감지 이벤트 -> 인풋에 포커스가 이동되었을 때 동작함.
+      // input 이벤트 : 내용 변화 감지 이벤트 -> 인풋에 내용이 입력될때마다 이벤트가 동작함.
+      searchInput.addEventListener("input", (event) => {
+        // console.log(event);
+        searchResult.innerHTML = event.currentTarget.value;
+      });
+
+      //select 선택 요소 값 출력
+      const select = document.querySelector(".select");
+      const selectResult = document.querySelector(".select-result");
+
+      select.addEventListener("change", (event) => {
+        selectResult.innerHTML = event.currentTarget.value;
+      });
+
+      //select 요소 목록을 동적으로 생성하기
+      const selectYear = document.querySelector(".select-year");
+      const selectMonth = document.querySelector(".select-month");
+      const selectDay = document.querySelector(".select-day");
+      const dateButton = document.querySelector(".date-button");
+      const dateResult = document.querySelector(".date-result");
+
+      //Date : 내장 객체
+      let currentYear = new Date().getFullYear();
+
+      for (let i = 1900; i <= currentYear; i++) {
+        //option 태그 및 text 생성
+        let option = document.createElement("option");
+        let value = document.createTextNode(i);
+        option.appendChild(value);
+        //option 태그에 value attrbute를 추가
+        option.setAttribute("value", i);
+        //select에 추가
+        selectYear.appendChild(option);
+      }
+
+      for (let i = 1; i <= 12; i++) {
+        let option = document.createElement("option");
+        let value = document.createTextNode(i);
+        option.appendChild(value);
+        option.setAttribute("value", i);
+        selectMonth.appendChild(option);
+      }
+
+      const getMonthDate = (year, month) => {
+        //특정월의 날짜 수 가져오기
+        let monthDate = new Date(year, month, 0).getDate();
+
+        //select option 초기화
+        selectDay.innerHTML = "<option>일을 선택해주세요</option>";
+
+        for (let i = 1; i <= monthDate; i++) {
+          let option = document.createElement("option");
+          let value = document.createTextNode(i);
+          option.appendChild(value);
+          option.setAttribute("value", i);
+          selectDay.appendChild(option);
+        }
+      };
+      selectMonth.addEventListener("change", () => {
+        getMonthDate(selectYear.value, selectMonth.value);
+      });
+
+      dateButton.addEventListener("click", () => {
+        dateResult.innerHTML =
+          selectYear.value + selectMonth.value + selectDay.value;
       });
     </script>
   </body>
