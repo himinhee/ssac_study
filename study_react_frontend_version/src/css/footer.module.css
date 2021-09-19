@@ -1,0 +1,15 @@
+.footer {
+    background: #050201;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.section {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    color: #999999;
+}
+.section > div {
+    margin: 10px 0;
+}

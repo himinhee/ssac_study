@@ -1,0 +1,230 @@
+/* CSS Reset 후 할일 : line-height 설정 지우기, box-sizing:border-box */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body{
+    color: #ffffff;
+    background-color: #0a0707;
+}
+mark {
+	background: none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom css */
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header{
+    height:300px;
+    background-image: url("head_bg.jpg");
+    background-size: cover;
+    /* background-size: contain; */
+}
+
+.header-section{
+	/* 화면 크기가 작아지면 너비를 자동으로 줄이기 */
+	max-width: 540px;
+	margin: 0 auto;
+	padding: 145px 20px 0 20px;
+}
+
+.header-logo{
+	font-family: 'twaysky', sans-serif;
+	font-size: 40px;
+	padding-bottom:10px;
+}
+
+.header-form{
+	padding: 20px;
+	background-color: #241715;
+	display: flex;
+}
+
+.header-form-btn{
+	width: 24px;
+	height: 24px;
+	background: none;
+	border: none;
+	padding: 0;
+	margin-right: 15px;
+}
+
+.header-form-img{
+	width: 24px;
+	height: 24px;
+}
+
+.header-form-text{
+	height: 24px;
+	background: none;
+	border: 0;
+	padding: 0;
+	color: #999999;
+	font-size: 16px;
+	flex: 1; 
+	/* flex:1 - size를 부모요소 전체 공간으로 적용 */
+	font-family: 'KyoboHand', sans-serif;
+}
+
+.header-form-text:focus{
+	outline: none;
+	border-bottom: 1px solid #999999
+}
+
+.main{
+	padding-top: 30px;
+}
+
+.section{
+	max-width: 540px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.todo-item{
+	padding: 20px;
+	background-color: #241715;
+	display: flex;
+	border-bottom: 1px solid #323449;
+}
+
+.todo-item-check{
+	background: none;
+	border: none;
+	width: 24px;
+	height: 24px;
+	margin: 0 15px 0 0;
+}
+
+.todo-item-text{
+	height: 24px;
+	/* line-height는 개발자도구를 이용해서 정밀하게 조정 */
+	line-height: 26px;
+	padding: 0;
+	border: 0;
+	color: #999999;
+	font-size: 16px;
+	flex: 1; 
+	font-family: 'KyoboHand', sans-serif;
+}
+
+.todo-item-del{
+	width: 24px;
+	height: 24px;
+	background: none;
+	border: none;
+	padding: 0;
+	margin-left: 15px;
+}
+
+.todo-item-img{
+	width: 24px;
+	height: 24px;
+	transform: rotate(45deg);
+}
+
+.status-section{
+	padding: 20px;
+	background-color: #241715;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+/* 2개의 자손 요소-1개는 class로, 1개는 button-에 동시 적용 */
+.status-section .status-left,
+.status-section button{
+	background: none;
+	border: none;
+	color: #999999;
+	font-size: 13px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.status-section button{
+	padding: 0;
+}
+
+.status-section button:hover{
+	color: #eeeeee;
+}
+
+.status-section button.active{
+	color: #ed6645;
+}
+.today{
+	color: #999999;
+	font-size: 13px;
+	text-align: right;
+	padding-top: 10px;
+}
+.footer{
+	background: #050201;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.footer-section{
+	max-width: 540px;
+	margin: 0 auto;
+	padding: 30px 20px;
+	color: #999999;
+}
+.footer-section>div{
+	margin: 10px 0;
+}
