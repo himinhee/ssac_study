@@ -1,0 +1,33 @@
+.section{
+	padding: 20px;
+	background-color: #241715;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+/* 2개의 자손 요소-1개는 class로, 1개는 button-에 동시 적용 */
+.btn {
+	background: none;
+	border: none;
+	color: #999999;
+	font-size: 13px;
+	height: 22px;
+	line-height: 22px;
+    padding: 0;
+}
+
+.btn :hover{
+	color: #eeeeee;
+}
+
+.btn .active{
+	color: #ed6645;
+}
+
+.left {
+    color: #999999;
+    font-size: 13px;
+    height: 22px;
+    line-height: 22px;
+}
