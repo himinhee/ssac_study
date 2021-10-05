@@ -1,0 +1,13 @@
+.containerFluid {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 6.4rem;
+  background-color: #f7f7f7;
+}
+
+.containerCenter {
+  max-width: 57.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.6rem 0;
+}
