@@ -21,10 +21,10 @@ HtmlCss : Pascal case - Java script, JAVA, C, C++ (특히 class 이름으로 사
 
 ```
 In this Front End classroom, 
-- HTML( Class, id ) : kebab case
-- File/Folder name : snake case
-- Javascript : Camel case
-- Javascript Class : Pascal Case
+- HTML( Class, id ) : kebab-case
+- File/Folder name : snake_case
+- Javascript : camelCase
+- Javascript Class : PascalCase
 ```
 
 ## HTML
